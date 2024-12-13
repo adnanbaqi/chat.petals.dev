@@ -1,6 +1,6 @@
-# Petals Chat
+# Immutable AI's Swarm Based Chat Bot.
 
-A chatbot [web app](https://chat.petals.dev) + HTTP and WebSocket endpoints for LLM inference with the [Petals](https://petals.dev) client
+A chatbot [web app](https://chat.golab.ai) + HTTP and WebSocket endpoints for LLM inference with the [Petals](https://petals.dev) client
 
 ## Interactive Chat
 
@@ -8,16 +8,14 @@ A chatbot [web app](https://chat.petals.dev) + HTTP and WebSocket endpoints for 
 <img src="https://i.imgur.com/QVTzc6u.png" width="600px">
 </div>
 
-You can try it out at **https://chat.petals.dev** or run the backend on your server using these commands:
+You can try it out at **https://chat.golab.ai** or run the backend on your server using these commands:
 
 ```bash
-git clone https://github.com/petals-infra/chat.petals.dev.git
-cd chat.petals.dev
+git clone https://github.com/immutableai/chatbot_petals.git
+cd chatbot_petals
 pip install -r requirements.txt
 flask run --host=0.0.0.0 --port=5000
 ```
-
-🦙 **Want to serve Llama 2?** Request access to its weights at the ♾️ [Meta AI website](https://ai.meta.com/resources/models-and-libraries/llama-downloads/) and 🤗 [Model Hub](https://huggingface.co/meta-llama/Llama-2-70b-hf), then run `huggingface-cli login` in the terminal before starting the web app. If you don't want Llama 2, just remove the `meta-llama` models from [config.py](https://github.com/petals-infra/chat.petals.dev/blob/main/config.py).
 
 🦄 **Deploying with Gunicorn.** In production, we recommend using gunicorn instead of the Flask dev server:
 
@@ -35,6 +33,8 @@ The backend provides two APIs endpoints:
 - [HTTP API](#http-api-apiv1) (`/api/v1/...`)
 
 Please use the WebSocket API when possible - it is much faster, more powerful, and consumes less resources.
+
+#Internal Details
 
 If you develop your own web app, you can use our endpoint at `https://chat.petals.dev/api/...` for research and development, then set up your own backend for production using the commands above.
 
