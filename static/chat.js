@@ -231,7 +231,7 @@ function upgradeTextArea() {
   });
 }
 
-const animFrames = ["⌛", "🧠"];
+const animFrames = ["•","••"];
 var curFrame = 0;
 
 function animateLoading() {
